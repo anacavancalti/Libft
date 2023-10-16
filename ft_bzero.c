@@ -3,28 +3,39 @@
 /*                                                        ::::::::            */
 /*   ft_bzero.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
+/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/09 12:23:36 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/09 15:38:33 by anacaval      ########   odam.nl         */
+/*   Created: 2023/10/13 14:17:19 by anacavalcan   #+#    #+#                 */
+/*   Updated: 2023/10/15 08:31:51 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// sets all the bytes in the memory block to 0
-// two parameters: a pointer to the memory area, and the size of this area
-
 #include <libft.h>
 
- void bzero(void *s, size_t n)
- {
+// #include <stdio.h>
+
+void ft_bzero(void *s, size_t n)
+{
     char *c;
     size_t i;
 
-    c = s;
     i = 0;
-    while (i < n)
+    c = s;
+    while(i < n)
     {
         c[i] = '\0';
         i++;
     }
- }
+}
+
+/*int main(void)
+{
+    char s[]= "Ana";
+    size_t n;
+
+    n = 8;
+    printf("Before: %s\n", s);
+    ft_bzero(s, n);
+    printf("After: %s\n", s);
+    return(0);
+}*/

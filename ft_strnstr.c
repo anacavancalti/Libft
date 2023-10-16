@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: anacaval <anacaval@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 10:39:29 by anacaval          #+#    #+#             */
-/*   Updated: 2023/10/08 13:04:20 by anacaval         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strnstr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: anacaval <anacaval@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/10/08 10:39:29 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/16 17:48:00 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+// locates a substring in a string
 
-char *ft_strnstrn(const char *big, const char *little, size_t len) // locate a substring in a string
+// #include <libft.h>
+#include <stdio.h>
+
+char ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-size_t i;
-size_t j;
+    char found;
+    size_t i;
 
-if (*little == '\0')
-    return ((char *) big); 
-
-i = 0;
-while (big[i] && i < len)
-{
-    j = 0;
-    while (big[i + j] == little[j] && (i +j) < len)
-    {
-        if ((little[j + 1] == '\0'))
-        return ((char *) &big[i]);
-        j++;
-    }
-    i++;
+    i = 0;
 }
-return (NULL);
+
+
+
+int main(void)
+{
+    char haystack[] = "Cavalcanti";
+    char needle[] = "val";
+    size_t len;
+
+    len = 4;
+    char found = ft_strnstr(haystack, needle, len);
+    printf("Comparison:%c\n", found);
+    return (0);
 }
