@@ -3,27 +3,24 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <anacaval@student.42.fr>            +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/08 10:39:29 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/16 17:48:00 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/09 18:11:27 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/17 14:29:42 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// locates a substring in a string
-
-// #include <libft.h>
 #include <stdio.h>
+// #include <libft.h>
 
-char ft_strnstr(const char *haystack, const char *needle, size_t len)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len) 
 {
-    char found;
-    size_t i;
+char found;
+size_t i;
 
-    i = 0;
+i = 0;
+
 }
-
-
 
 int main(void)
 {
@@ -33,6 +30,6 @@ int main(void)
 
     len = 4;
     char found = ft_strnstr(haystack, needle, len);
-    printf("Comparison:%c\n", found);
+    printf("Found:%c\n", found);
     return (0);
 }
