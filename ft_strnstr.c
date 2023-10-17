@@ -6,15 +6,16 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/08 10:39:29 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/17 19:21:40 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/17 19:23:57 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Cast to the address of a char in a string
 // locates a substring in a string
+// #include <stdio.h>
 
 #include <libft.h>
-// #include <stdio.h>
+
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
