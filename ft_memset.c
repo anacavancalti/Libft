@@ -3,41 +3,41 @@
 /*                                                        ::::::::            */
 /*   ft_memset.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/17 19:24:06 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/17 20:48:35 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/09 15:41:42 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/18 09:01:22 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *s, int c, size_t n)
 {
     size_t i;
     unsigned char *pointer;
 
     i = 0;
-    pointer = ((unsigned char *)b);
-    while(i < len)
+    pointer = ((unsigned char *)s);
+    while(i < n)
     {
         pointer[i] = ((unsigned char)c);
         i++;
     }
-    return (b);
+    return (s);
 }
 
 /*int main(void)
 {
-    char string[] = "Anacaval";
-    unsigned char c;
-    size_t lengh;
+    char memory_area[] = "Ana Cavalcanti";
+    unsigned char constant_byte_c;
+    size_t bytes;
 
-    lengh = 3;
-    c = 'C';
-    printf("Before:%s\n", string);
-    ft_memset(string, c, lengh);
-    printf("After:%s\n", string);
+    constant_byte_c = 'C';
+    bytes = 4;
+    printf("Before:%s\n", memory_area);
+    ft_memset(memory_area, constant_byte_c, bytes);
+    printf("After:%s\n", memory_area);
     return (0);
 }*/
