@@ -6,7 +6,7 @@
 /*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/18 20:01:34 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/18 21:06:52 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/18 21:09:58 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ char *ft_strdup(const char *s1)
 	}
 	printf("Original String:%s\n", s1);
 	printf("Duplicate String:%s\n", duplicate);
+	free(duplicate);
 	return (0);
 }*/
