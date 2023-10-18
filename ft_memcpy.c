@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/17 20:59:20 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/17 21:31:09 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/18 09:10:06 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/18 09:32:36 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 /*int main(void)
 {
-    char destination[] = " ";
+    char destination[] = "canti";
     char source[] = "Anacaval";
     size_t n;
 
-    n = 5;
+    n = 4;
     printf("Before:%s\n", destination);
     ft_memcpy(destination, source, n);
     printf("After:%s\n", destination);
