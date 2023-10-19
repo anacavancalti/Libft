@@ -3,23 +3,24 @@
 /*                                                        ::::::::            */
 /*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/18 21:21:05 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/18 22:29:55 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/19 08:49:07 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/19 09:23:18 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Allocates memory in a temporary array
-#include <string.h>
+
 #include <stdio.h>
+#include <string.h>
 // #include "libft.h"
 
 void *ft_memmove(void *dst, const void *src, size_t n)
 {
     char *destination = dst;
     const char *source = src;
-    char temporary[n]; 
+    char temporary[n];
     size_t i;
 
     i = 0;
@@ -44,9 +45,9 @@ int main(void)
     size_t bytes;
 
     bytes = 4;
-    char *original = ft_memmove(destination, source, bytes);
+    char *original = ft_memmove(destination, source, bytes); 
     printf("Original:%s\n", original);
     printf("Source:%s\n", source);
     printf("Destination:%s\n", destination);
-    return (0);
+    
 }
