@@ -3,62 +3,63 @@
 /*                                                        ::::::::            */
 /*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/18 20:01:34 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/18 21:09:58 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/19 08:02:45 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/19 08:44:50 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Allocation of memory for the new string, including space for the null terminator
+// Use duplicate = NULL for memory allocation failure
 
 // #include <stdio.h>
 // #include <stdlib.h>
 #include "libft.h"
 
-/*size_t ft_strlen(const char *s)
+/*size_t  ft_strlen(const char *s)
 {
-    size_t i;
+    size_t len;
 
-    i = 0;
-    while (s[i] != '\0')
+    len = 0;
+    while(s[len] != '\0')
     {
-        i++;
+        len++;
     }
-    return (i);
+    return (len);
 }*/
 
-char *ft_strdup(const char *s1)
+char *ft_strdup(const char *s)
 {
-	size_t len = ft_strlen(s1); 
-	size_t i;
-	char *duplicate;
+    size_t len = ft_strlen(s);
+    size_t i;
+    char *duplicate;
 
-	i = 0;
-	duplicate = (char *)malloc((len + 1) * sizeof(char)); // Allocation of memory for the new string, including space for the null terminator
-	if(duplicate == NULL)
-	{
-		return (NULL);
-	}
-	while(i < len)
-	{
-		duplicate[i] = s1[i];
-		i++;
-	}
-	duplicate[len] = '\0';
-	return (duplicate);
+    i = 0; 
+    duplicate = (char *)malloc((len + 1) * sizeof(char));
+    if(duplicate == NULL)
+    {
+        return (NULL);
+    }
+    while(i < len)
+    {
+        duplicate[i] = s[i];
+        i++;
+    }
+    return (duplicate);
 }
 
 /*int main(void)
 {
-	char s1[] = "Ana Cavalcanti";
-	
-	char *duplicate = ft_strdup(s1);
-	if(duplicate == NULL)
-	{
-		printf("Memory allocation has failed.\n");
-		return (1);
-	}
-	printf("Original String:%s\n", s1);
-	printf("Duplicate String:%s\n", duplicate);
-	free(duplicate);
-	return (0);
+    char s[] = "Ana Cavalcanti";
+    char *duplicate = ft_strdup(s);
+    if(duplicate == NULL)
+    {
+        printf("Memory allocation has failed.\n");
+        return (1);
+    }
+    printf("Original String:%s\n", s);
+    printf("Duplicate String:%s\n", duplicate);
+    free(duplicate);
+    return (0);
 }*/
