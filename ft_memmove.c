@@ -6,15 +6,15 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/19 08:49:07 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/19 09:23:18 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/10/19 09:34:11 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Allocates memory in a temporary array
 
-#include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
 void *ft_memmove(void *dst, const void *src, size_t n)
 {
@@ -38,7 +38,7 @@ void *ft_memmove(void *dst, const void *src, size_t n)
     return (dst);
 }
 
-int main(void)
+/*int main(void)
 {
     char destination[] = " ";
     char source[] = "Ana Cavalcanti";
@@ -49,5 +49,5 @@ int main(void)
     printf("Original:%s\n", original);
     printf("Source:%s\n", source);
     printf("Destination:%s\n", destination);
-    
-}
+    return (0);
+}*/
