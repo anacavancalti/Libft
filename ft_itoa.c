@@ -3,52 +3,30 @@
 /*                                                        ::::::::            */
 /*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/21 12:34:01 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/21 16:53:28 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/22 11:38:07 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/22 16:24:10 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Counts how many digits there are in a number lengh (nbr_size)
-#include <stdio.h>
-#include <stdlib.h>
-// #include "libft.h"
+// (count-- starts from where the count has finished on nbr_size)
+// + '0' to transform the module in a whole number 
+#include "libft.h"
 
-/*
-void	*ft_calloc(size_t count, size_t size)
+static int	nbr_size(long int len)
 {
-	void	*pointer;
-	size_t	i;
+	int	i;
 
 	i = 0;
-	pointer = (malloc (count * size));
-	if (pointer == NULL)
+	if (len < 1)
 	{
-		return (NULL);
-	}
-	while (i < (count * size))
-	{
-		(*(unsigned char *)(pointer + i)) = 0;
-		i++;
-	}
-	return (pointer);
-}
-*/
-
-static int nbr_size(long int len)
-{
-	int i;
-
-	i = 0;
-	if (len < 1) 
-	{
-		len = (len * -1); // Transforms lengh in a positive number
+		len = (len * -1);
 		i++;
 	}
 	while (len > 0)
 	{
-		len = (len / 10); // Removes the last digit of lengh
+		len = (len / 10);
 		i++;
 	}
 	return (i);
@@ -58,44 +36,36 @@ char	*ft_itoa(int n)
 {
 	char		*string;
 	int			count;
-	long int 	long_i;	
-	
+	long int	long_i;
+
 	long_i = n;
 	count = nbr_size(long_i);
 	string = ((char *)ft_calloc(sizeof(char), (count + 1)));
 	if (!string)
-	{
 		return (NULL);
-	}
 	if (long_i < 0)
-	{
-		long_i = long_i * - 1;
-	}
+		long_i = long_i * -1;
 	if (long_i == 0)
 	{
-		string[long_i] = '0';
+		string[0] = '0';
 		return (string);
 	}
-	while (count--) // Starts from where the count has finished on nbr_size
+	while (count--)
 	{
-		string[count] = long_i % 10 + '0'; // Transforms the module into interger by adding 0
+		string[count] = long_i % 10 + '0';
 		long_i = long_i / 10;
 	}
-	if (string < 0)
-	{
+	if (n < 0)
 		string[0] = '-';
-	}
 	return (string);
 }
 
-/*
-int main(void)
-{
-	int n;
-	
-	n = 7777;
-	char *string = ft_itoa(n);
-	printf("String:\"%s\"\n", string);
-	return (0);
-}
-*/
+// int main(void)
+// {
+// 	int n;
+
+// 	n = 765;
+// 	char *string = ft_itoa(n);
+// 	printf("String:\"%s\"\n", string);
+// 	return (0);
+// }
