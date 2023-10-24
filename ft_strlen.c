@@ -6,12 +6,11 @@
 /*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/10 17:58:36 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/15 08:31:51 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/24 11:01:23 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-// #include <stdio.h>
+#include "libft.h"
 
 size_t ft_strlen(const char *s)
 {

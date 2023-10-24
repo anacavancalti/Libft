@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/18 09:10:06 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/18 09:32:36 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/10/24 21:06:20 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
     size_t i;
 
     i = 0;
+    if (!dst || !src)
+    {
+        return (NULL);
+    }
     while(i < n)
     {
         destination[i] = source[i];
@@ -32,15 +36,15 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
     return (dst);
 }
 
-/*int main(void)
-{
-    char destination[] = "canti";
-    char source[] = "Anacaval";
-    size_t n;
+// int main(void)
+// {
+//     char destination[] = "canti";
+//     char source[] = "Anacaval";
+//     size_t n;
 
-    n = 4;
-    printf("Before:%s\n", destination);
-    ft_memcpy(destination, source, n);
-    printf("After:%s\n", destination);
-    return (0);
-}*/
+//     n = 4;
+//     printf("Before:%s\n", destination);
+//     ft_memcpy(destination, source, n);
+//     printf("After:%s\n", destination);
+//     return (0);
+// }
