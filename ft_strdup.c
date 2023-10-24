@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/19 08:02:45 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/19 08:44:50 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/10/24 21:24:26 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ char *ft_strdup(const char *s)
     size_t i;
     char *duplicate;
 
-    i = 0; 
+    i = 0;
+    if (!s)
+    {
+        return (NULL);
+    }
     duplicate = (char *)malloc((len + 1) * sizeof(char));
     if(duplicate == NULL)
     {
@@ -46,10 +50,11 @@ char *ft_strdup(const char *s)
         duplicate[i] = s[i];
         i++;
     }
+    duplicate[i] = '\0';
     return (duplicate);
 }
 
-/*int main(void)
+int main(void)
 {
     char s[] = "Ana Cavalcanti";
     char *duplicate = ft_strdup(s);
@@ -62,4 +67,4 @@ char *ft_strdup(const char *s)
     printf("Duplicate String:%s\n", duplicate);
     free(duplicate);
     return (0);
-}*/
+}

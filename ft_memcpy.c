@@ -6,15 +6,13 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/18 09:10:06 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 21:06:20 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/24 21:10:20 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Converts 'dst' to a character pointer
 // Converts 'src' to a constant character pointer
-// The return is the original value of dst
-// #include <string.h>
-// #include <stdio.h>
+
 #include "libft.h"
 
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
