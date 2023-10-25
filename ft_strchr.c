@@ -3,48 +3,46 @@
 /*                                                        ::::::::            */
 /*   ft_strchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <anacaval@student.42.fr>            +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/04 17:17:26 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 11:01:02 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/09 18:12:15 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/25 18:10:07 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Line 26 (Cast) - Endereço do char dentro de um string
-
 #include "libft.h"
 
-
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	unsigned char	chr;
+	unsigned int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {   
-        if (s[i] == c)
-        {
-            return ((char *)&s[i]); 
-        }
-        i++;  
-    }
-    return (NULL);
+	chr = (unsigned char)c;
+	i = 0;
+	while (s[i] != '\0' && s[i] != chr)
+	{
+		i++;
+	}
+	if (s[i] == chr)
+	{
+		return ((char *)&s[i]);
+	}
+	return (NULL);
 }
 
-/*int main(void)
-{
-    char to_find;
-    char string[] = "AnaCaval";
-
-
-    to_find = 'B';
-    if (ft_strchr(string, to_find))
-    {
-        printf("Found:%c\n", to_find);
-    }
-    else
-    {
-        printf("NotFound:%c\n", to_find);
-    }
-    return (0);
-}*/
+// int main(void)
+// {
+//     char to_find;
+//     const char string[] = "Anacaval";
+   
+//     to_find = 'c';
+//     if (ft_strchr(string, to_find))
+//     {
+//         printf("Found:%c\n", to_find);
+//     }
+//     else
+//     {
+//         printf("Not Found:%c\n", to_find);
+//     }
+//     return (0);
+// }
