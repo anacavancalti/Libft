@@ -3,12 +3,13 @@
 /*                                                        ::::::::            */
 /*   ft_isdigit.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <marvin@42.fr>                      +#+                     */
+/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/03 13:20:41 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 14:42:57 by anacaval      ########   odam.nl         */
+/*   Created: 2023/11/02 18:02:36 by anacavalcan   #+#    #+#                 */
+/*   Updated: 2023/11/02 18:02:38 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
