@@ -6,41 +6,37 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:12:40 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/22 11:11:45 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:11:50 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Converts the initial portion of the string pointed by nptr to int
-// Wants to ignore ascii 9 to 13
-// Uses * 10 to convert to interger, then -'0' ot remove the extra 0 afterwards
-
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-    int number;
-    int signal;
+	int	number;
+	int	signal;
 
-    number = 0;
-    signal = 1;
-    while ((*nptr >= '\t' && *nptr <= '\r') || (*nptr == ' '))
-    {
-        nptr++;
-    }
-    if(*nptr == '+' || *nptr == '-')
-    {
-        if (*nptr == '-')
-        {
-            signal = -1;
-        }
-        nptr++;
-    }
-    while (ft_isdigit(*nptr))
-    {
-        number = (number * 10) + (*nptr - '0');
-        nptr++;
-    }
-    return (number * signal);
+	number = 0;
+	signal = 1;
+	while ((*nptr >= '\t' && *nptr <= '\r') || (*nptr == ' '))
+	{
+		nptr++;
+	}
+	if (*nptr == '+' || *nptr == '-')
+	{
+		if (*nptr == '-')
+		{
+			signal = -1;
+		}
+		nptr++;
+	}
+	while (ft_isdigit(*nptr))
+	{
+		number = (number * 10) + (*nptr - '0');
+		nptr++;
+	}
+	return (number * signal);
 }
 
 // int main(void)

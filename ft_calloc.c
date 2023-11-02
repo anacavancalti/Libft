@@ -6,26 +6,29 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/19 11:18:57 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/20 08:18:20 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/10/30 22:18:28 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-// #include "libft.h"
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*pointer;
 	size_t	i;
 
-	i = 0;
-	pointer = (malloc (count * size));
-	if (pointer == NULL)
+	if (nmemb != 0 && (nmemb * size) / nmemb != size)
 	{
 		return (NULL);
 	}
-	while (i < (count * size))
+	i = 0;
+	pointer = (malloc (nmemb * size));
+	if (pointer == NULL)
+	{
+		free(pointer);
+		return (NULL);
+	}
+	while (i < (nmemb * size))
 	{
 		(*(unsigned char *)(pointer + i)) = 0;
 		i++;
@@ -33,21 +36,21 @@ void	*ft_calloc(size_t count, size_t size)
 	return (pointer);
 }
 
-/*int main(void)
-{
-	unsigned int i;
-	size_t count;
-	size_t size; 
-	
-	i = 0;
-	count = 3;
-	size = sizeof(int);
-	char *string = ft_calloc(count, size);
-	while (i < count)
-	{
-		printf("Char:%c\n", string[i]);
-		i++;
-	}
-	free(string);
-	return (0);
-}*/
+// int main(void)
+// {
+// 	unsigned int i;
+// 	size_t nmemb;
+// 	size_t size; 
+// 
+// 	i = 0;
+// 	nmemb = 3;
+// 	size = sizeof(int);
+// 	char *string = ft_calloc(nmemb, size);
+// 	while (i < nmemb)
+// 	{
+// 		printf("Char:%c\n", string[i]);
+// 		i++;
+// 	}
+// 	free(string);
+// 	return (0);
+// }

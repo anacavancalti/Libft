@@ -6,14 +6,13 @@
 /*   By: anacaval <marvin@42.fr>                      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/03 13:13:24 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/16 09:08:13 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/24 14:41:59 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-// #include <stdio.h>
+#include "libft.h"
 
-int ft_isalpha(int i)
+int	ft_isalpha(int i)
 {
 	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z'))
 	{
@@ -25,23 +24,22 @@ int ft_isalpha(int i)
 	}
 }
 
-/*int main(void)
-{
-	int i;
-
-	char string[] = "AnaCaval";
-	i = 0;
-	while(string[i] != '\0')
-	{
-		if (ft_isalpha(string[i]) != 1)
-		{
-			printf("String:%c\n", string[i]);
-			printf("Is not Alpha:%d\n", 0);
-			return (0);
-		}
-		printf("String:%c\n", string[i]);
-		i++;
-	}
-	printf("Is Alpha:%d\n", 1);
-	return (1);
-}*/
+// int main(void)
+// {
+// 	int i;
+// 	char string[] = "Anacaval5";
+//
+// 	i = 0;
+// 	while(string[i] != '\0')
+// 	{
+// 		if(ft_isalpha(string[i]) != 1)
+// 		{
+// 			printf("IsNotAlpha:%d\n", 0);
+// 			return (0);
+// 		}
+// 		printf("String:%c\n", string[i]);
+// 		i++;
+// 	}
+// 	printf("IsAlpha:%d\n", 1);
+// 	return (1);
+// }

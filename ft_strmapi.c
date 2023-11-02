@@ -6,17 +6,17 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/25 12:26:20 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/26 16:18:22 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:52:13 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int index;
-	char *new_string;
-	
+	unsigned int	index;
+	char			*new_string;
+
 	if (!s || !f)
 	{
 		return (NULL);
@@ -36,8 +36,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_string);
 }
 
-char random_function(unsigned int index, char c)
-{	
+char	random_function(unsigned int index, char c)
+{
 	if (index % 2 == 0 && c >= 'a' && c <= 'z')
 	{
 		c -= 32;

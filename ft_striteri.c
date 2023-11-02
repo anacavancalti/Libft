@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strncmp.c                                       :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/09 18:06:46 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/02 17:15:19 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/27 12:30:24 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/27 17:09:55 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	unsigned int	index;
 
-	i = 0;
-	if (n == 0)
+	if (!s || !f)
 	{
-		return (0);
+		return ;
 	}
-	while (s1[i] == s2[i] && i < n - 1 && s1[i] != '\0' && s2[i] != '\0')
+	index = 0;
+	while (s[index] != '\0')
 	{
-		i++;
+		f(index, &s[index]);
+		index++;
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+}
+
+void	any_function(unsigned int index, char *c)
+{
+	if (index % 2 == 0)
+	{
+		*c = ft_toupper(*c);
+	}
 }
 
 // int main(void)
 // {
-//     size_t n;
-//     n = 6;
-//     int equals = ft_strncmp("abcdefgh", "abcdwxyz", n);
-//     printf("Equals:%d\n", equals);
-//     return (0);
+// 	char string[] = "Anacaval";
+// 	ft_striteri(string, any_function);
+// 	printf("%s\n", string);
+// 	return (0);
 // }

@@ -3,35 +3,33 @@
 /*                                                        ::::::::            */
 /*   ft_toupper.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/12 09:46:54 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/15 08:31:51 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/09 17:19:59 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/10/24 16:42:36 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-// #include <stdio.h>
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-    {
-        c -= 32;
-    }
-    return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+		c -= 32;
+	}
+	return (c);
 }
 
-/*int main(void)
-{
-    char a;
-    char b;
-
-    a = 'a';
-    b = 'b';
-    printf("Before:%c\n", a);
-    b = ft_toupper(a);
-    printf("After:%c\n", b);
-    return(0);
-}*/
+// int main(void)
+// {
+// 	char a;
+// 	char b;
+//
+// 	a = 'a';
+// 	b = 'b';
+// 	printf("Before:%c\n", a);
+// 	b = ft_toupper(a);
+// 	printf("After:%c\n", b);
+// 	return (0);
+// }

@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlen.c                                        :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
+/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/09 18:13:58 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 15:36:08 by anacaval      ########   odam.nl         */
+/*   Created: 2023/10/28 17:51:27 by anacavalcan   #+#    #+#                 */
+/*   Updated: 2023/10/28 18:04:57 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len] != '\0')
+	i = 0;
+	if (s != NULL)
 	{
-		len++;
+		while (s[i] != '\0')
+		{
+			write (fd, &s[i], 1);
+			i++;
+		}
+		write (fd, "\n", 1);
 	}
-	return (len);
 }
 
 // int main(void)
 // {
-//     char string[]= "AnaCaval";
-//     size_t size;
+// 	char string[] = "Anacaval";
+// 	int fd;
 // 
-//     size = ft_strlen(string);
-//     printf("Lengh:%zu\n", size);
-//     return (0);
+// 	fd = open("test.txt", O_RDWR);
+// 	ft_putendl_fd(string, fd);
+// 	return (0);
 // }

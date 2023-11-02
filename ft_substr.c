@@ -3,50 +3,58 @@
 /*                                                        ::::::::            */
 /*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/22 19:00:35 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/22 20:58:21 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/23 10:25:31 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/11/02 17:15:47 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Allocates (with malloc(3)) and returns a substring from the string ’s’.
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *substring;
-	
+	size_t	final_substring;
+	char	*substring;
+	size_t	i;
+	size_t	j;
+
 	i = 0;
-	size_t string_size = ft_strlen(s); // Size of original string 
-	size_t malloc_size = len; // Memory size is initialized with the defined length
-	if (string_size <= len) // Avoiding to have more memory size than the necessary
-	{ 
-		malloc_size = string_size;
-	}
-	substring = (char *)malloc(sizeof(*s) * (malloc_size + 1));
-	if (substring == 0)
-	{
+	j = 0;
+	if (start > ft_strlen(s))
+		final_substring = 0;
+	else
+		final_substring = ft_strlen(s) - start;
+		
+	if (final_substring > len)
+		final_substring = len;
+	
+	substring = malloc((final_substring + 1));
+	
+	if (substring == NULL)
 		return (NULL);
-	}
-	while (i <= len && s[i] != '\0')
+	while (s[i] != '\0')
 	{
-		substring[i] = s[start + i];
+		if (i >= start && j < final_substring)
+		{
+			substring[j] = s[i];
+			j++;
+		}
 		i++;
 	}
+	substring[j] = '\0';
 	return (substring);
 }
 
-// int main(void)
-// {
-// 	char const string[] = "Ana Cavalcanti";
-// 	unsigned int start;
-// 	size_t maximum_len;
+int main(void)
+{
+	char string[] = "Ana Cavalcanti Moreira";
+	unsigned int start_index;
+	size_t maximum_len;
 
-// 	start = 4;	
-// 	maximum_len = 4;
-// 	char *substring = ft_substr(string, start, maximum_len);
-// 	printf("Substring:%s\n", substring);
-// 	return (0);
-// }
+	start_index = 3;
+	maximum_len = 10;
+	char *substring = ft_substr(string, start_index, maximum_len);
+	printf("substring:%s\n", substring);
+	return (0);
+}

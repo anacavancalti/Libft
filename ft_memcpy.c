@@ -6,43 +6,42 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/18 09:10:06 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 21:10:20 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/10/30 10:58:50 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Converts 'dst' to a character pointer
-// Converts 'src' to a constant character pointer
-
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    char *destination = dst;
-    const char *source = src;
-    size_t i;
+	unsigned char	*destination;
+	unsigned char	*source;
+	size_t			i;
 
-    i = 0;
-    if (!dst || !src)
-    {
-        return (NULL);
-    }
-    while(i < n)
-    {
-        destination[i] = source[i];
-        i++;
-    }
-    return (dst);
+	destination = (unsigned char *) dst;
+	source = (unsigned char *) src;
+	i = 0;
+	if	 (!destination && !source)
+	{
+		return (0);
+	}
+	while (i < n)
+	{
+		destination[i] = source[i];
+		i++;
+	}
+	return (dst);
 }
 
 // int main(void)
 // {
-//     char destination[] = "canti";
-//     char source[] = "Anacaval";
+//     char dst[] = "canti";
+//     char src[] = "Anacaval";
 //     size_t n;
-
+// 
 //     n = 4;
-//     printf("Before:%s\n", destination);
-//     ft_memcpy(destination, source, n);
-//     printf("After:%s\n", destination);
+//     printf("Before:%s\n", dst);
+//     ft_memcpy(dst, src, n);
+//     printf("After:%s\n", dst);
 //     return (0);
 // }

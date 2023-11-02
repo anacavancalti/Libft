@@ -6,11 +6,9 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/19 08:02:45 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/25 12:21:27 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:14:42 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-// Allocation of memory for a new string, including the null terminator
 
 #include "libft.h"
 
@@ -20,16 +18,12 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 	char	*duplicate;
 
-	len = ft_strlen(s) + 1;
+	len = ft_strlen(s);
 	i = 0;
-	if (!s)
-	{
-		return (NULL);
-	}
-	duplicate = (char *)malloc((len) * sizeof(char));
+	duplicate = (char *)malloc(len + 1);
 	if (duplicate == NULL)
 	{
-		return (NULL);
+		return (duplicate);
 	}
 	while (i < len)
 	{

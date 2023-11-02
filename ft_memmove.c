@@ -6,29 +6,33 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/19 08:49:07 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/25 14:24:03 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:13:55 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-// Allocates memory in a temporary array
 
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (!dst && !src)
+	unsigned char			*destination;
+	const unsigned char		*source;
+
+	destination = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	if (!destination && !source)
 	{
 		return (NULL);
 	}
-	if ((unsigned char *)dst < (unsigned char *)src)
+	if (destination < source)
 	{
-		ft_memcpy(dst, src, n);
+		ft_memcpy(destination, source, n);
 	}
 	else
 	{
-		while (n--)
+		while (n > 0)
 		{
-			*(unsigned char *)(dst + n) = *(unsigned char *)(src + n);
+			n--;
+			destination[n] = source[n];
 		}
 	}
 	return (dst);
@@ -39,7 +43,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 // 	char destination[10];
 // 	char source[] = "Anacaval";
 // 	size_t size;
-
+// 
 // 	size = 4;		
 // 	printf("Before:%s\n", destination);
 // 	ft_memmove(destination, source, size); 

@@ -3,43 +3,50 @@
 /*                                                        ::::::::            */
 /*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/10 14:32:07 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/10/16 12:45:19 by anacavalcan   ########   odam.nl         */
+/*   Created: 2023/10/09 18:13:27 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/11/02 17:11:23 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-//#include <string.h>
-//#include <stdio.h>
+#include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t dstsize = ft_strlen(dst);
-    size_t srcsize = ft_strlen(src);
-    size_t totalsize = dstsize + srcsize;
-    size_t i;
+	char	*source;
+	size_t	dstsize;
+	size_t	srcsize;
+	size_t	totalsize;
+	size_t	i;
 
-    size_t remaining_space = size - dstsize - 1;
-    i = 0;
-    while (i <= remaining_space && src[i] != '\0')
-    {
-        dst[dstsize + i] = src[i];
-        i++; 
-    }
-    return (totalsize);
+	source = (char *)src;
+	dstsize = ft_strlen(dst);
+	srcsize = ft_strlen(src);
+	totalsize = srcsize + size;
+	if (size > dstsize)
+	{
+		totalsize = srcsize + dstsize;
+	}
+	i = 0;
+	while ((i + dstsize + 1) < size && src[i] != '\0')
+	{
+		dst[dstsize + i] = source[i];
+		i++;
+	}
+	dst[dstsize + i] = '\0';
+	return (totalsize);
 }
 
-/*int main (void)
-{
-    char dst[] = "Ana";
-    const char src[] = "Cavalcanti";
-    size_t size = 7;
-
-    printf("Before: %s\n", dst);
-    size_t totalsize = ft_strlcat(dst, src, size);
-    printf("After: %s\n", dst);
-    printf("Size: %zu\n", totalsize);
-    return (0);
-}*/
+// int main(void)
+// {
+//     char destination[] = "Ana";
+//     char source[] = "Cavalcanti";
+//     size_t size;
+// 
+//     size = 5;
+//     size_t totalsize = ft_strlcat(destination, source, size);
+//     printf("Destination:%s\n", destination);
+//     printf("Total Size:%zu\n", totalsize);
+//     return (0);
+// }

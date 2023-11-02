@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlen.c                                        :+:    :+:            */
+/*   ft_putchar_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
+/*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/09 18:13:58 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/24 15:36:08 by anacaval      ########   odam.nl         */
+/*   Created: 2023/10/28 17:31:43 by anacavalcan   #+#    #+#                 */
+/*   Updated: 2023/10/28 17:41:11 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	write (fd, &c, 1);
 }
 
 // int main(void)
 // {
-//     char string[]= "AnaCaval";
-//     size_t size;
-// 
-//     size = ft_strlen(string);
-//     printf("Lengh:%zu\n", size);
-//     return (0);
+// 	char c;
+// 	int fd;
+
+// 	c = 'A';
+// 	fd = open("test.txt", O_RDWR);
+// 	ft_putchar_fd(c, fd);
+// 	return (0);
 // }

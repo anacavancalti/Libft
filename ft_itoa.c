@@ -6,12 +6,10 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/22 11:38:07 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/22 16:24:10 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:13:19 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// (count-- starts from where the count has finished on nbr_size)
-// + '0' to transform the module in a whole number 
 #include "libft.h"
 
 static int	nbr_size(long int len)
@@ -63,7 +61,7 @@ char	*ft_itoa(int n)
 // int main(void)
 // {
 // 	int n;
-
+//
 // 	n = 765;
 // 	char *string = ft_itoa(n);
 // 	printf("String:\"%s\"\n", string);

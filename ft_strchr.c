@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/09 18:12:15 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/25 18:10:07 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/10/28 14:41:19 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strchr(const char *s, int c)
 // {
 //     char to_find;
 //     const char string[] = "Anacaval";
-   
+//
 //     to_find = 'c';
 //     if (ft_strchr(string, to_find))
 //     {
