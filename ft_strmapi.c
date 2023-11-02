@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/25 12:26:20 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/02 17:52:13 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/11/02 17:57:42 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_string);
 }
 
-char	random_function(unsigned int index, char c)
-{
-	if (index % 2 == 0 && c >= 'a' && c <= 'z')
-	{
-		c -= 32;
-	}
-	return (c);
-}
+// char	random_function(unsigned int index, char c)
+// {
+// 	if (index % 2 == 0 && c >= 'a' && c <= 'z')
+// 	{
+// 		c -= 32;
+// 	}
+// 	return (c);
+// }
 
 // int main(void)
 // {

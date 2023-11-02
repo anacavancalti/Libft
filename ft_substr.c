@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/23 10:25:31 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/02 17:15:47 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/11/02 17:55:47 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	final_substring;
+	size_t	end_substring;
 	char	*substring;
 	size_t	i;
 	size_t	j;
@@ -22,20 +22,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	j = 0;
 	if (start > ft_strlen(s))
-		final_substring = 0;
+		end_substring = 0;
 	else
-		final_substring = ft_strlen(s) - start;
+		end_substring = ft_strlen(s) - start;
 		
-	if (final_substring > len)
-		final_substring = len;
+	if (end_substring > len)
+		end_substring = len;
 	
-	substring = malloc((final_substring + 1));
+	substring = malloc((end_substring + 1));
 	
 	if (substring == NULL)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (i >= start && j < final_substring)
+		if (i >= start && j < end_substring)
 		{
 			substring[j] = s[i];
 			j++;
@@ -48,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 int main(void)
 {
-	char string[] = "Ana Cavalcanti Moreira";
+	char string[] = "Ana Cristina Cavalcanti";
 	unsigned int start_index;
 	size_t maximum_len;
 

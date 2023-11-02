@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/23 15:09:18 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/02 17:52:19 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/11/02 17:57:10 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		length_new_string;
+	int		len_new_string;
 	char	*new_string;
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	length_new_string = ft_strlen(s1) + ft_strlen(s2) + 1;
-	new_string = (char *)malloc(sizeof(char) * (length_new_string));
+	len_new_string = ft_strlen(s1) + ft_strlen(s2) + 1;
+	new_string = (char *)malloc(sizeof(char) * (len_new_string));
 	if (s1 == 0 || s2 == 0)
 		return (NULL);
 	if (!new_string)

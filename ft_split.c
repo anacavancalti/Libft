@@ -6,7 +6,7 @@
 /*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/28 18:56:41 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/11/02 17:14:26 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/11/02 17:54:20 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static char	**ft_clean(char **matrix)
 	return (NULL);
 }
 
-static size_t	ft_count_strings(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
 	size_t	s_count;
 
@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c)
 	{
 		return (NULL);
 	}
-	s_count = ft_count_strings(s, c);
+	s_count = ft_count_words(s, c);
 	matrix = (char **)malloc (sizeof(char *) * (s_count + 1));
 	if (matrix == NULL)
 	{

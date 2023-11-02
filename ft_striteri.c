@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/27 12:30:24 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/27 17:09:55 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/02 17:57:30 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-void	any_function(unsigned int index, char *c)
-{
-	if (index % 2 == 0)
-	{
-		*c = ft_toupper(*c);
-	}
-}
+// void	any_function(unsigned int index, char *c)
+// {
+// 	if (index % 2 == 0)
+// 	{
+// 		*c = ft_toupper(*c);
+// 	}
+// }
 
 // int main(void)
 // {
