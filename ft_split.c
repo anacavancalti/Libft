@@ -6,7 +6,7 @@
 /*   By: anacavalcanti <anacavalcanti@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/28 18:56:41 by anacavalcan   #+#    #+#                 */
-/*   Updated: 2023/11/02 17:54:20 by anacavalcan   ########   odam.nl         */
+/*   Updated: 2023/11/05 10:10:45 by anacavalcan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 static char	**ft_clean(char **matrix)
 {
-	size_t	string_number;
+	size_t	word;
 
-	string_number = 0;
-	while (matrix[string_number])
+	word = 0;
+	while (matrix[word])
 	{
-		free(matrix[string_number]);
-		string_number++;
+		free(matrix[word]);
+		word++;
 	}
 	free(matrix);
 	return (NULL);
@@ -28,9 +28,9 @@ static char	**ft_clean(char **matrix)
 
 static size_t	ft_count_words(char const *s, char c)
 {
-	size_t	s_count;
+	size_t	word_number;
 
-	s_count = 0;
+	word_number = 0;
 	while (*s)
 	{
 		while (*s == c && *s)
@@ -39,24 +39,24 @@ static size_t	ft_count_words(char const *s, char c)
 		}
 		if (*s != c && *s)
 		{
-			s_count++;
+			word_number++;
 			while (*s != c && *s)
 			{
 				s++;
 			}
 		}
 	}
-	return (s_count);
+	return (word_number);
 }
 
 static char	**ft_content_matrix(char **matrix, const char *s, char c)
 {
 	size_t	index;
-	size_t	s_count;
+	size_t	word_content;
 	size_t	s_start;
 
 	index = 0;
-	s_count = 0;
+	word_content = 0;
 	while (s[index] != '\0')
 	{
 		if (s[index] == c)
@@ -66,27 +66,27 @@ static char	**ft_content_matrix(char **matrix, const char *s, char c)
 			s_start = index;
 			while (s[index] != '\0' && s[index] != c)
 				index++;
-			matrix[s_count] = ft_substr(s, s_start, index - s_start);
-			if (matrix[s_count] == NULL)
+			matrix[word_content] = ft_substr(s, s_start, index - s_start);
+			if (matrix[word_content] == NULL)
 				return (ft_clean(matrix));
-			s_count++;
+			word_content++;
 		}
 	}
-	matrix[s_count] = NULL;
+	matrix[word_content] = (NULL);
 	return (matrix);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	s_count;
+	size_t	words;
 	char	**matrix;
 
 	if (!s)
 	{
 		return (NULL);
 	}
-	s_count = ft_count_words(s, c);
-	matrix = (char **)malloc (sizeof(char *) * (s_count + 1));
+	words = ft_count_words(s, c);
+	matrix = (char **)malloc (sizeof(char *) * (words + 1));
 	if (matrix == NULL)
 	{
 		return (NULL);
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 	{
 		return (NULL);
 	}
-	matrix[s_count] = (NULL);
+	matrix[words] = (NULL);
 	return (matrix);
 }
 
