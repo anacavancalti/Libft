@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/20 13:01:17 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/30 15:24:58 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/06 11:25:20 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
