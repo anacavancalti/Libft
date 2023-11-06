@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2023/11/06 11:30:08 by anacaval      #+#    #+#                 */
+/*   Updated: 2023/11/06 15:38:06 by anacaval      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list *tail;
+	
+	if (!lst)
+	{
+		lst = new;
+	}
+	if (!new)
+	{
+		return (NULL);
+	}
+	tail = ft_lstlast(lst);
+	tail->next = new;
+}

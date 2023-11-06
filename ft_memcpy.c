@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/18 09:10:06 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/10/30 10:58:50 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/06 14:15:12 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	destination = (unsigned char *) dst;
 	source = (unsigned char *) src;
 	i = 0;
-	if	 (!destination && !source)
+	if (!destination && !source)
 	{
 		return (0);
 	}
