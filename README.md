@@ -1,6 +1,6 @@
 # Libft
 
-Functions using <ctype.h>
+	Functions using <ctype.h>
 
 [ft_isalnum](https://github.com/anacavancalti/Libft/blob/main/ft_isalnum.c)
 
@@ -16,8 +16,7 @@ Functions using <ctype.h>
 
 [ft_tolower](https://github.com/anacavancalti/Libft/blob/main/ft_tolower.c)
 
-Functions using <string.h>
-
+	Functions using <string.h>
 
 [ft_bzero](https://github.com/anacavancalti/Libft/blob/main/ft_bzero.c)
 
@@ -47,13 +46,13 @@ Functions using <string.h>
 
 [ft_strnstr](https://github.com/anacavancalti/Libft/blob/main/ft_strnstr.c)
 
-Functions using <stdlib.h>
+	Functions using <stdlib.h>
 
 [ft_atoi](https://github.com/anacavancalti/Libft/blob/main/ft_atoi.c)
 
 [ft_calloc](https://github.com/anacavancalti/Libft/blob/main/ft_calloc.c)
 
-Non-standard functions
+	Non-Standard functions
 
 [ft_substr](https://github.com/anacavancalti/Libft/blob/main/ft_substr.c)
 
@@ -76,3 +75,23 @@ Non-standard functions
 [ft_putendl_fd](https://github.com/anacavancalti/Libft/blob/main/ft_putendl_fd.c)
 
 [ft_putnbr_fd](https://github.com/anacavancalti/Libft/blob/main/ft_putnbr_fd.c)
+
+	Linked List functions
+
+[ft_lstnew](https://github.com/anacavancalti/Libft/blob/main/ft_lstnew.c)
+
+[ft_lstadd_front](https://github.com/anacavancalti/Libft/blob/main/ft_lstadd_front.c)
+
+[ft_lstsize](https://github.com/anacavancalti/Libft/blob/main/ft_lstsize.c)
+
+[ft_lstlast](https://github.com/anacavancalti/Libft/blob/main/ft_lstlast.c)
+
+[ft_lstadd_back](https://github.com/anacavancalti/Libft/blob/main/ft_lstadd_back.c)
+
+[ft_lstdelone](https://github.com/anacavancalti/Libft/blob/main/ft_lstdelone.c)
+
+[ft_lstclear](https://github.com/anacavancalti/Libft/blob/main/ft_lstclear.c)
+
+[ft_lstiter](https://github.com/anacavancalti/Libft/blob/main/ft_lstiter.c)
+
+[ft_lstmap](https://github.com/anacavancalti/Libft/blob/main/ft_lstmap.c)

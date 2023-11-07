@@ -6,11 +6,9 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/06 11:30:13 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/07 14:21:45 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/07 14:54:44 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-// lst is the node of the list, in this case 
 
 #include "libft.h"
 
