@@ -6,7 +6,7 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/06 11:30:19 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/07 12:13:54 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/07 14:22:31 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *given_node;
-	
+	t_list	*given_node;
+
 	if (!*lst)
 	{
 		return ;

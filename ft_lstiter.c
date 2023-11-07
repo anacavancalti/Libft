@@ -6,13 +6,13 @@
 /*   By: anacaval <anacaval@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/06 11:30:24 by anacaval      #+#    #+#                 */
-/*   Updated: 2023/11/07 12:34:25 by anacaval      ########   odam.nl         */
+/*   Updated: 2023/11/07 14:22:55 by anacaval      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*given_node;
 

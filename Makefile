@@ -6,7 +6,7 @@
 #    By: anacaval <anacaval@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/10/18 11:26:25 by anacaval      #+#    #+#                  #
-#    Updated: 2023/11/02 17:16:04 by anacavalcan   ########   odam.nl          #
+#    Updated: 2023/11/07 14:31:34 by anacaval      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,19 @@ SOURCES =	ft_atoi.c \
 			ft_putnbr_fd.c \
 			ft_split.c \
 
+BONUS_SOURCE = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
 OBJECTS = $(SOURCES:%.c=%.o)	   
+
+OBJECTS_BONUS = $(BONUS_SOURCE:%.c=%.o)
 
 all: $(NAME)
 
@@ -73,4 +85,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re 
+bonus: $(OBJECTS_BONUS)
+			$(AR) $(NAME) $(OBJECTS_BONUS)
+
+.PHONY: all clean fclean re bonus
